@@ -151,6 +151,7 @@ section {
   gap: 24px; /* Space between cards */
   padding: 40px 10px 20px 10px; /* Add 10px padding to left and right */
   scroll-behavior: smooth;
+  scroll-snap-type: x mandatory; /* Enable horizontal scroll snap */
 }
 
 section > div {
@@ -171,6 +172,7 @@ section > div {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  scroll-snap-align: start; /* Snap each card to the start of the scroll area */
 }
 
 section > div h2 {
