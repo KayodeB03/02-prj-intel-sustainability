@@ -148,7 +148,7 @@ section {
   display: flex;
   flex-direction: row;
   overflow-x: auto; /* Enable horizontal scrolling on large screens */
-  gap: 24px; /* Space between cards */
+  gap: 20px; /* Space between cards */
   padding: 40px 10px 20px 10px; /* Add 10px padding to left and right */
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory; /* Enable horizontal scroll snap */
@@ -253,7 +253,7 @@ section > div:hover {
   section {
     flex-direction: column;
     overflow-x: visible;
-    gap: 20px;
+    gap: 24px;
     align-items: center;
   }
   section > div {
