@@ -155,16 +155,16 @@ section {
 
 section > div {
   background: #f8fbfd; /* Light blue background for a clean look */
-  border: 1.5px solid #262626; /* Use Intel blue for border */
-  border-radius: 0; /* Remove all border radius for square corners */
+  border: 1px solid #262626; /* Thinner border for timeline cards */
+  border-radius: 10px 0 10px 0; /* Default: top left and bottom right */
   flex: 0 0 auto;
-  height:500px;
-  width:500px;
-  box-shadow: 0 2px 8px rgba(0,104,181,0.08); /* Subtle blue shadow */
+  height: 380px;
+  width: 320px;
+  box-shadow: 0 4px 16px rgba(0,104,181,0.18); /* More visible box shadow for cards */
   text-align: center;
   color: #0068B5; /* Intel blue for text */
   font-family: 'Montserrat', Arial, sans-serif;
-  transition: box-shadow 0.2s, border 0.2s;
+  transition: box-shadow 0.2s, border 0.2s, transform 0.2s, border-radius 0.3s; /* Add border-radius to transition */
   position: relative; /* Needed for overlay positioning */
   overflow: hidden; /* Hide overflow for overlay effect */
   display: flex;
@@ -180,6 +180,7 @@ section > div h2 {
   font-weight: 700;
   margin-left: 10px;
   margin-right: 10px;
+  margin-top: 10px;
 }
 
 section > div h3 {
@@ -194,9 +195,9 @@ section > div h3 {
 section > div img {
   /* Make images take up most of the card space */
   width: 90%;
-  height: 70%;
+  height: 60%;
   max-width: 95%;
-  max-height: 70%;
+  max-height: 60%;
   flex-grow: 1;
   object-fit: cover;
   margin-bottom: 12px;
@@ -238,6 +239,11 @@ section > div:hover p {
   /* Show the overlay text on hover */
   opacity: 1;
   color: #fff;
+}
+
+section > div:hover {
+  transform: translateY(-10px); /* Move the card up slightly on hover */
+  border-radius: 0 10px 0 10px; /* On hover: top right and bottom left */
 }
 
 /* Responsive: Stack cards vertically on small screens */
